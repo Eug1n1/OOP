@@ -6,7 +6,10 @@ namespace lab_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Git!");
+            Console.WriteLine("Hello Git!");
+            Console.WriteLine("Hello Git!");
+            Console.WriteLine("Hello Git!");
         }
     }
 }
