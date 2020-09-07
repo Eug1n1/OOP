@@ -198,9 +198,10 @@ namespace lab_2
 
                 #endregion
 
-
-
-            #endregion
+                #endregion
+                
+            int[,] array = new int[10, 10];
+            //sovhdskvkjdsbjkvsdnkvb
 
         }
     }
