@@ -264,7 +264,7 @@ namespace lab_2
             {
                 for (var j = 0; j < myArr[i].Length; j++)
                 {
-                    myArr[i][j] = Convert.ToDouble(Console.ReadLine());
+                    myArr[i][j] = Double.Parse(Console.ReadLine());
                 }
             }
 
@@ -302,7 +302,8 @@ namespace lab_2
             var (intTuple, strTuple, chTuple, stringTuple, ulongTuple) = obj7;
 
             // TODO: разобраться с ( _ ) что за штука такая
-            
+
+            _ = 10;
             
             // TODO: как сравнивать
             var left = (a: 6, b: 10);
@@ -356,6 +357,10 @@ namespace lab_2
             uncheckedTest();
 
             #endregion
+
+
+            _ = 19;
+            
         }
     }
 }
