@@ -1,83 +1,87 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.Collections;
+using System.Linq;
 
 namespace lab_3
 {
-    public class Multitude<T> : IEnumerable
+    public class Multitute<T> : IEnumerable
     {
-        #region Поля и свойства
 
-        private readonly T[] _multitudes;
+        #region Поля и Свойства
 
         public int Length { get; private set; } = 0;
 
         public int Capacity { get; private set; } = 1024;
+
+        private readonly T[] _multitudes;
         
         public T this[int j] => _multitudes[j];
 
         #endregion
 
-        #region Конструкторы
+        #region Конструктор
 
-        public Multitude()
+        public Multitute()
         {
             _multitudes = new T[Capacity];
         }
         
-        public Multitude(int capacity)
+        public Multitute(int capacity)
         {
-            _multitudes = new T[capacity];
             Capacity = capacity;
+            _multitudes = new T[Capacity];
         }
-
-        public Multitude(T[] array)
+        
+        public Multitute(T[] arr)
         {
-            _multitudes = array;
-            Length = array.Length;
-        }
-
-        public Multitude(List<T> list)
-        {
-            _multitudes = list.ToArray();
-            Length = list.Count;
-            Capacity = list.Capacity;
+            _multitudes = arr;
+            Capacity = arr.Length;
+            Length = arr.Length;
         }
 
         #endregion
 
         #region Методы
 
-        public void Add(T num)
+        public void Add(T element)
         {
-            _multitudes[Length] = num;
-            Length++;
+            if (Exist(element))
+            {
+                throw new Exception("element already exist");
+            }
+            else
+            {
+                _multitudes[Length] = element;
+                Length++;
+            }
+
         }
 
         public void Delete(int index)
         {
-            for (int i = 0; i < Length; i++)
+            for (var i = 0; i < Length; i++)
             {
-                _multitudes[index + i] = _multitudes[index + i + 1];
+                _multitudes[index + i] = _multitudes[index + 1 + i];
             }
-
             Length--;
         }
-
-        public static Multitude<T> Create(int capacity)
+        
+        private bool Exist(T element)
         {
-            return new Multitude<T>(capacity);
+            return _multitudes.Any(mlt => mlt.ToString() == element.ToString());
         }
-
-        #endregion
         
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return (IEnumerator) GetEnumerator();
+            return GetEnumerator();
         }
 
-        public MultitudeEnumerator<T> GetEnumerator()
+        public MultitudeEnum<T> GetEnumerator()
         {
-            return new MultitudeEnumerator<T>(_multitudes, Length);
+            return new MultitudeEnum<T>(_multitudes, Length);
         }
+
+        #endregion
+       
     }
 }

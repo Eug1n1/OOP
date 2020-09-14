@@ -1,18 +1,17 @@
-﻿using System;
+using System;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace lab_3
 {
-    public class MultitudeEnumerator<T> : IEnumerator
+    public class MultitudeEnum<T> : IEnumerator
     {
-        public T[] _mlt;
-        
-        private int position = -1;
+        private readonly T[] _mlt;
 
-        private int _length;
 
-        public MultitudeEnumerator(T[] list, int length)
+        private int _position = -1;
+        private readonly int _length;
+
+        public MultitudeEnum(T[] list, int length)
         {
             _mlt = list;
             _length = length;
@@ -20,13 +19,13 @@ namespace lab_3
 
         public bool MoveNext()
         {
-            position++;
-            return (position < _length);
+            _position++;
+            return (_position < _length);
         }
 
         public void Reset()
         {
-            position = -1;
+            _position = -1;
         }
 
         object IEnumerator.Current
@@ -43,7 +42,7 @@ namespace lab_3
             {
                 try
                 {
-                    return _mlt[position];
+                    return _mlt[_position];
                 }
                 catch (IndexOutOfRangeException)
                 {

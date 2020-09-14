@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace lab_3
 {
@@ -8,14 +6,25 @@ namespace lab_3
     {
         static void Main(string[] args)
         {
-            var dmlt = new Multitude<double>();
-            dmlt.Add(1.5);
-            dmlt.Add(3.7);
-            dmlt.Add(9.1);
+            var mlt = new Multitute<int>(10);
 
-            foreach (var d in dmlt)
+            try
             {
-                Console.WriteLine(d);
+                mlt.Add(1);
+                mlt.Add(2);
+                mlt.Add(3);
+                mlt.Add(55);
+                
+                mlt.Delete(3);
+
+                foreach (var m in mlt)
+                {
+                    Console.WriteLine(m);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
         }
     }
