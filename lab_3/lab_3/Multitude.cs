@@ -8,7 +8,9 @@ namespace lab_3
     {
 
         #region Поля и Свойства
-
+        
+        // TODO: реализовать мин и макс значения
+        
         public int Length { get; private set; } = 0;
 
         public int Capacity { get; private set; } = 1024;
@@ -45,6 +47,7 @@ namespace lab_3
 
         public void Add(T element)
         {
+            // TODO: Проверка на мин макс
             if (Exist(element))
             {
                 throw new Exception("element already exist");
@@ -57,12 +60,27 @@ namespace lab_3
 
         }
 
-        public void Delete(int index)
+        public void Delete(T num)
         {
-            for (var i = 0; i < Length; i++)
+            for (int i = 0; i < Length; i++)
             {
-                _multitudes[index + i] = _multitudes[index + 1 + i];
+                if (_multitudes[i].ToString() == num.ToString())
+                {
+                    for (var j = i; j < Length - 1; j++)
+                    {
+                        _multitudes[j] = _multitudes[j + 1];
+                    } 
+                    Length--;
+                    return;
+                }       
             }
+        } 
+        public void DeleteIndex(int index)
+        {
+            for (var j = index; j < Length - 1; j++)
+            {
+                    _multitudes[j] = _multitudes[j + 1];
+            } 
             Length--;
         }
         
