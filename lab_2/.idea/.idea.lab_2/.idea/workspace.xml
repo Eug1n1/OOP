@@ -23,49 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8abaefbf-6ccb-4265-9501-1d39fcf62944" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.lab_2/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/lab_2/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/lab_2/v16/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/.idea/.idea.lab_3/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/bin/Debug/netcoreapp3.1/lab_3.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/bin/Debug/netcoreapp3.1/lab_3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/bin/Debug/netcoreapp3.1/lab_3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/bin/Debug/netcoreapp3.1/lab_3.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/bin/Debug/netcoreapp3.1/lab_3.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/bin/Debug/netcoreapp3.1/lab_3.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/Debug/netcoreapp3.1/lab_3.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/lab_3.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/lab_3.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/lab_3.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab_3/lab_3/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_1/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +86,6 @@
       <workItem from="1599504070164" duration="2000" />
       <workItem from="1599817465324" duration="128000" />
       <workItem from="1599821226806" duration="596000" />
-      <workItem from="1599832934522" duration="44000" />
     </task>
     <servers />
   </component>
