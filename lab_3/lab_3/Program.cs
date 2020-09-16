@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 
 namespace lab_3
 {
@@ -6,29 +7,47 @@ namespace lab_3
     {
         static void Main(string[] args)
         {
-            var mlt = new Multitute<int>(10);
+            var mlt = Multitute<int>.Create(10);
+            var m = Multitute<int>.Create(10);
 
             try
             {
+                m.Add(1);
+                m.Add(2);
+                m.Add(3);
+                m.Add(4);
+                m.Add(22);
+                m.Add(57);
+                m.Add(534);
+                m.Add(54);
+                m.Add(34);
+                m.Add(53);
+
+                
                 mlt.Add(1);
                 mlt.Add(2);
                 mlt.Add(3);
-                mlt.Add(55);
+                mlt.Add(4);
                 mlt.Add(22);
                 mlt.Add(57);
                 mlt.Add(534);
-                
-                mlt.DeleteIndex(3);
-                mlt.Delete(534);
+                mlt.Add(54);
+                mlt.Add(34);
+                mlt.Add(53);
 
-                foreach (var m in mlt)
+                Console.WriteLine(mlt.Equals(m));
+                Console.WriteLine(mlt.GetHashCode());
+                Console.WriteLine(mlt.GetHashCode());
+
+                Console.WriteLine($"mlt id: {mlt.ID}\n");
+                foreach (var mm in mlt)
                 {
-                    Console.WriteLine(m);
+                    Console.WriteLine(mm);
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine(e.Message);
             }
         }
     }
