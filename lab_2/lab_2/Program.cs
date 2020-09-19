@@ -15,8 +15,6 @@ namespace lab_2
         {
             #region 1
 
-            #region примитивные типы
-
             bool booltest = true;
             byte bytetest = byte.MaxValue;
             sbyte sbytetest = sbyte.MaxValue;
@@ -36,10 +34,6 @@ namespace lab_2
                 $"decimaltest: {decimaltest}\ndouble: {doubletest}\nfloattest: {floattest}\ninttest: {inttest}\n" +
                 $"uinttest: {uinttest}\nlongtest: {longtest}\nulongtest: {ulongtest}\nshorttest: {shorttest}\nushort: {ushorttest}");
 
-            #endregion
-
-            #region явное преобразование
-
             int a = 255;
 
             byte b = (byte) a;
@@ -50,10 +44,7 @@ namespace lab_2
 
             byte f = (byte) e;
             int g = (int) e;
-
-            #endregion
-
-            #region неявное приведение
+            
 
             byte aa = 255;
 
@@ -62,20 +53,14 @@ namespace lab_2
             short ad = aa;
             double af = aa;
             ushort ag = aa;
-
-            #endregion
-
-            #region Convert
+            
 
             string aaa = "255";
 
             byte aab = Convert.ToByte(aaa);
             int aac = Convert.ToInt16(aaa);
             double aad = Convert.ToDouble(aaa);
-
-            #endregion
-
-            #region упаковка и распаковка
+            
 
             int x = 255;
             Object obj = x;
@@ -88,20 +73,14 @@ namespace lab_2
             short z = 877;
             Object objec = z;
             z = (short) objec;
-
-            #endregion
-
-            #region Неявно типизированные локальные переменные
+            
 
             var intovaya = 567;
             var color = Color.Aqua;
             var client = new WebClient();
             var str = "строка";
             var list = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-            #endregion
-
-            #region null
+            
 
             int? nullable = null;
 
@@ -112,10 +91,7 @@ namespace lab_2
 
             if (_nullable.HasValue)
                 Console.WriteLine(_nullable.Value);
-
-            #endregion
-
-            #region var
+            
 
             var stroka = "something";
             
@@ -123,13 +99,10 @@ namespace lab_2
             stroka = 123;
             */
 
-            #endregion
 
             #endregion
 
             #region 2
-
-            #region Объявите строковые литералы. Сравните их
 
             string str1 = "hello";
             string str2 = "world";
@@ -142,11 +115,8 @@ namespace lab_2
             {
                 Console.WriteLine(str2 + str1);
             }
-
-            #endregion
-
-            #region сцепление, копирование, выделение подстроки и тд
-
+            
+            
             string str3 = "hello world";
             string str4 = "ello word";
             string str5;
@@ -166,16 +136,10 @@ namespace lab_2
             Console.WriteLine(str4.Replace("word", "world"));
 
             Console.WriteLine(str4.Remove(0, 4));
-
-            #endregion
-
-            #region Продемонстрируйте интерполирование строк
+            
 
             Console.WriteLine($"str4: {str4}\nstr3: {str3}");
-
-            #endregion
-
-            #region Создайте пустую и null строку
+            
 
             string str6 = null;
 
@@ -187,10 +151,7 @@ namespace lab_2
             {
                 Console.WriteLine("is not null");
             }
-
-            #endregion
-
-            #region stringBuilder
+            
 
             StringBuilder stringBuilder = new StringBuilder("chtoto strokovoe");
 
@@ -199,14 +160,11 @@ namespace lab_2
             stringBuilder.Append(" ne str ");
 
             Console.WriteLine(str6);
-
-            #endregion
+            
 
             #endregion
             
             #region 3
-            
-            #region Создайте целый двумерный массив и выведите его на консоль 
 
             var array = new int[,] {{11, 23, 45}, {4, 23, 76}, {12, 34, 98}};
 
@@ -222,10 +180,7 @@ namespace lab_2
                 }
                 Console.WriteLine();
             }
-
-            #endregion
-
-            #region Создайте одномерный массив строк
+            
 
             var stringArray = new string[]{"hello", "hi", "world", "net", "rider", "JetBrains"};
 
@@ -248,10 +203,6 @@ namespace lab_2
             {
                 Console.Write(str7 + "\t");
             }
-
-            #endregion
-
-            #region Создайте ступечатый (не выровненный) массив
 
             var myArr = new double[3][];
             myArr[0] = new double[2];
@@ -282,8 +233,6 @@ namespace lab_2
             var stroka1 = "stroka";
 
             #endregion
-
-            #endregion*/
 
             #region 4
 
@@ -358,9 +307,6 @@ namespace lab_2
 
             #endregion
 
-
-            _ = 19;
-            
         }
     }
 }
