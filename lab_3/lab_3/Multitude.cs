@@ -4,23 +4,25 @@ using System.Linq;
 
 namespace lab_3
 {
-    public class Multitute<T> : IEnumerable
+    public class Multitute : IEnumerable
     {
 
         #region Поля и Свойства
         
-        // TODO: реализовать мин и макс значения
+        private static int _elementsCount;
+
+        private readonly int[] _multitudes;
+
+        public static int ElementsCount => _elementsCount;
 
         public readonly int ID;
         public int Length { get; private set; } = 0;
 
         public int Capacity { get; private set; } = 1024;
 
-        private readonly T[] _multitudes;
-        
-        public T this[int j] => _multitudes[j];
+        public int this[int j] => _multitudes[j];
 
-        public T Sum;
+        public int Sum;
 
         #endregion
 
@@ -28,30 +30,38 @@ namespace lab_3
 
         public Multitute()
         {
-            _multitudes = new T[Capacity];
+            _elementsCount++;
+            _multitudes = new int[Capacity];
             ID = new Random().Next(0, 256);
         }
         
         public Multitute(int capacity)
         {
+            _elementsCount++;
             Capacity = capacity;
-            _multitudes = new T[Capacity];
+            _multitudes = new int[Capacity];
             ID = new Random().Next(0, 256);
         }
         
-        public Multitute(T[] arr)
+        public Multitute(int[] arr)
         {
+            _elementsCount++;
             _multitudes = arr;
             Capacity = arr.Length;
             Length = arr.Length;
             ID = new Random().Next(0, 256);
+        }
+
+        static Multitute()
+        {
+            _elementsCount = 0;
         }
         
         #endregion
 
         #region Методы
 
-        public void Add(T element)
+        public void Add(int element)
         {
             if (Exist(element))
                 throw new Exception($"element {element} already exist");
@@ -66,7 +76,7 @@ namespace lab_3
             }
         }
 
-        public void Delete(T num)
+        public void Delete(int num)
         {
             for (int i = 0; i < Length; i++)
             {
@@ -90,9 +100,9 @@ namespace lab_3
             Length--;
         }
 
-        public static Multitute<T> Create(int capacity = 1024)
+        public static Multitute Create(int capacity = 1024)
         {
-            return new Multitute<T>(capacity);
+            return new Multitute(capacity);
         }
 
         public override string ToString()
@@ -102,7 +112,7 @@ namespace lab_3
             return str;
         }
 
-        public bool Equals(Multitute<T> obj)
+        public bool Equals(Multitute obj)
         {
             if (obj == null || obj.Length != Length)
                 return false;
@@ -118,9 +128,9 @@ namespace lab_3
             return true;
         }
 
-        public long GetHashCode()
+        public override int GetHashCode()
         {
-            long hash = 0;
+            int hash = 0;
 
             for (int i = 0; i < ID; i++)
             {
@@ -133,10 +143,10 @@ namespace lab_3
             hash ^= (hash >> 11);
             hash += (hash << 15);
             
-            return hash < 0 ? Math.Abs(hash) : hash;
+            return (hash < 0 ? Math.Abs(hash) : hash);
         }
 
-        private bool Exist(T element)
+        private bool Exist(int element)
         {
             return _multitudes.Any(mlt => mlt.ToString() == element.ToString());
         }
@@ -150,9 +160,9 @@ namespace lab_3
             return GetEnumerator();
         }
 
-        private MultitudeEnum<T> GetEnumerator()
+        private MultitudeEnum<int> GetEnumerator()
         {
-            return new MultitudeEnum<T>(_multitudes, Length);
+            return new MultitudeEnum<int>(_multitudes, Length);
         }
 
         #endregion

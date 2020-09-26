@@ -28,7 +28,8 @@ namespace lab_2
             ulong ulongtest = ulong.MaxValue;
             short shorttest = short.MaxValue;
             ushort ushorttest = ushort.MaxValue;
-
+            
+            
             Console.WriteLine(
                 $"booltest: {booltest}\nbytetest: {bytetest}\nsbytetest: {sbytetest}\nchartest: {chartest}\n" +
                 $"decimaltest: {decimaltest}\ndouble: {doubletest}\nfloattest: {floattest}\ninttest: {inttest}\n" +
@@ -141,7 +142,7 @@ namespace lab_2
             Console.WriteLine($"str4: {str4}\nstr3: {str3}");
             
 
-            string str6 = null;
+            string str6 = "";
 
             if (string.IsNullOrEmpty(str6))
             {
@@ -248,10 +249,8 @@ namespace lab_2
 
             var int1 = obj5.Item1;
 
-            var (intTuple, strTuple, chTuple, stringTuple, ulongTuple) = obj7;
-
-            // TODO: разобраться с ( _ ) что за штука такая
-
+            var (intTuple, strTuple, chTuple, _, ulongTuple) = obj7;
+            
             _ = 10;
             
             // TODO: как сравнивать
