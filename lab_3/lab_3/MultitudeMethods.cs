@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Linq;
 
 namespace lab_3
 {
-    public partial class Multitute : IEnumerable
+    public partial class Multitute
     {
         #region Методы
 
@@ -54,9 +53,7 @@ namespace lab_3
 
         public override string ToString()
         {
-            var str = _multitudes.Aggregate("{ ", (current, mlt) => current + $"{mlt} ") + " }";
-            
-            return str;
+            return _multitudes.Aggregate("{ ", (current, mlt) => current + $"{mlt} ") + " }";;
         }
 
         public bool Equals(Multitute obj)

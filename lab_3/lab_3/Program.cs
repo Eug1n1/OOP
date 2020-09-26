@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace lab_3
 {
@@ -8,7 +9,7 @@ namespace lab_3
         {
             var mlt = Multitute.Create(10);
             var m = Multitute.Create(10);
-
+            
             try
             {
                 m.Add(1);
@@ -45,6 +46,45 @@ namespace lab_3
                 }
 
                 Console.WriteLine(Multitute.ElementsCount);
+                
+                Multitute[] arr = new Multitute[2];
+                arr[0] = new Multitute(5);
+                arr[0].Add(2);
+                arr[0].Add(3);
+                arr[0].Add(4);
+                arr[0].Add(5);
+                arr[0].Add(7);
+                
+                arr[1] = new Multitute(5);
+                arr[1].Add(20);
+                arr[1].Add(3);
+                arr[1].Add(4);
+                arr[1].Add(5);
+                arr[1].Add(-7);
+
+                if (arr[0].Sum > arr[1].Sum)
+                {
+                    Console.WriteLine(arr[0].ToString());
+                }
+                else
+                {
+                    Console.WriteLine(arr[1].ToString());
+                }
+
+                List<Multitute> list = new List<Multitute>();
+                foreach (var multitute in arr)
+                {
+                    if (multitute.ToString().Contains("-"))
+                    {
+                        list.Add(multitute);
+                    }
+                }
+
+                foreach (var l in list)
+                {
+                    Console.WriteLine(l);
+                }
+
             }
             catch (Exception e)
             {

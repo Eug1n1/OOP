@@ -22,7 +22,7 @@ namespace lab_3
 
         public int this[int j] => _multitudes[j];
 
-        public int Sum;
+        public int Sum { get; private set; }
 
         #endregion
 
