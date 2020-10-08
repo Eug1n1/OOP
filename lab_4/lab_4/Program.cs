@@ -13,6 +13,10 @@ namespace lab_4
             {
                 Console.WriteLine("da");
             }
+            
+            var vec = new Vector();
+            vec = vec1 + vec2;
+            Console.WriteLine(vec.ToString());
 
             var a = "dklfncnbkl";
             a = a.usech(6);
@@ -21,6 +25,8 @@ namespace lab_4
             Console.WriteLine(vec1.ToString());
             vec1 = vec1.abs();
             Console.WriteLine(vec1.ToString());
+            
+            
         }
     }
 }

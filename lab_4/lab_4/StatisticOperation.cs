@@ -21,11 +21,15 @@ namespace lab_4
 
         public static Vector Sum(Vector vec1, Vector vec2)
         {
-            var vec = new Vector();
-            vec.X = vec1.X + vec2.X;
-            vec.Y = vec1.Y + vec2.Y;
-            
-            return vec;
+            return vec1 + vec2;
         }
+
+        public static double diff(Vector vec1, Vector vec2)
+        {
+            return Math.Abs(Math.Sqrt((vec1.X ^ 2) + (vec1.Y ^ 2)) - Math.Sqrt((vec2.X ^ 2) + (vec2.Y ^ 2)));
+        }
+        
+        
+        
     }
 }
