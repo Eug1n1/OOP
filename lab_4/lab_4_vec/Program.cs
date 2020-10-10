@@ -20,6 +20,8 @@ namespace lab_4_vec
             b.Items.Add(95);
             b.Items.Add(16);
 
+            a.Items[1] = 0;
+
             a = a + b;
 
             Console.WriteLine(a.ToString());

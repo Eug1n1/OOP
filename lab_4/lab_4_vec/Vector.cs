@@ -10,6 +10,11 @@ namespace lab_4_vec
         {
             Items = new List<T>();
         }
+        
+        public MyVector(List<T> list)
+        {
+            Items = list;
+        }
 
         public MyVector(params MyVector<T>[] a)
         {
