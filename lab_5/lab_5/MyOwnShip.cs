@@ -17,7 +17,7 @@ namespace lab_5
 
         public override string ToString()
         {
-            return GetInfo() + Title + " " + MaxSpeed;
+            return GetInfo() + " " + Title + " " + MaxSpeed;
         }
 
         bool IVehicle.DoClone()

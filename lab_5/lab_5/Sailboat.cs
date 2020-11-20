@@ -9,7 +9,7 @@
 
         public override string ToString()
         {
-            return GetInfo() + Title + " " + MaxSpeed;
+            return GetInfo() + " " + Title + " " + MaxSpeed;
         }
 
         public override bool DoClone()

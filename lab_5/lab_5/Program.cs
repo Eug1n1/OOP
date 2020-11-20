@@ -11,9 +11,9 @@ namespace lab_5
             Console.WriteLine(a.GetInfo());
             a.DoClone();
             
-            var b = new Steamboat("Steam", 30);
-            Ship ab = b;
-            Console.WriteLine(ab.GetInfo());
+            Ship b = new Steamboat("Steam", 30);
+            /*Ship ab = b;*/
+            Console.WriteLine(b.GetInfo());
             
             var c = new Boat("boat", 5);
             var d = new Corvette("corvette", 40);
@@ -33,6 +33,9 @@ namespace lab_5
             {
                 f.IAmPrinting(l);
             }
+
+            
+            Console.WriteLine(((Ship)c).GetInfo());
         }
     }
 }
