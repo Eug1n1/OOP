@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
-using lab_4_vec;
 
-namespace lab_4
+namespace lab_4_vec
 {
     public static class StatisticOperation
     {
-        public static string usech(this string a, int num = 1)
+        public static string Usech(this string a, int num = 1)
         {
             if(num > a.Length)
-                throw new Exception("kuda pihaesh?");
+                throw new Exception();
             
             return a.Substring(a.Length - (a.Length - num), a.Length - num);
         }

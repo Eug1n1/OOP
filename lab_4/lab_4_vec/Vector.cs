@@ -4,7 +4,28 @@ namespace lab_4_vec
 {
     public class MyVector<T>
     {
+        public class ProjectOwner
+        {
+            public int Id { get; private set; }    
+            public string Name { get; private set; }
+            public string Organization { get; private set; }
+            public ProjectOwner()
+            {
+            }
+
+            public ProjectOwner(int id, string name, string organization)
+            {
+                Id = id;
+                Name = name;
+                Organization = organization;
+            }        
+        }
+        
         public List<T> Items { get; set; }
+
+        public ProjectOwner Owner = new ProjectOwner(1, "Evgeniy Shumskiy", "BSTU Student");
+        
+
 
         public MyVector()
         {
@@ -42,12 +63,12 @@ namespace lab_4_vec
         
         public static bool operator ==(MyVector<T> vec1, MyVector<T> vec2)
         {
-            return vec1.Items.Count == vec2.Items.Count;
+            return vec1.Items == vec2.Items;
         }
         
         public static bool operator !=(MyVector<T> vec1, MyVector<T> vec2)
         {
-            return vec1.Items.Count != vec2.Items.Count;
+            return vec1.Items != vec2.Items;
         }
         
         public static bool operator true(MyVector<T> vec)
@@ -62,14 +83,12 @@ namespace lab_4_vec
 
         public override string ToString()
         {
-            var str = "( ";
+            var str = "";
             
             foreach (var item in Items)
             {
                 str += item.ToString() + " ";
             }
-
-            str += ")";
             return str;
         }
     }

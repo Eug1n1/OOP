@@ -12,18 +12,22 @@ namespace lab_4_vec
             a.Items.Add(14);
             a.Items.Add(15);
             a.Items.Add(16);
-            
+
+            Console.WriteLine(a.Owner.Name);
+
             MyVector<int> b = new MyVector<int>();
             b.Items.Add(6);
-            b.Items.Add(73);
+            b.Items.Add(-73);
             b.Items.Add(84);
             b.Items.Add(95);
-            b.Items.Add(16);
+            b.Items.Add(-16);
 
             a.Items[1] = 0;
 
             a = a + b;
 
+            Console.WriteLine(a.ToString());
+            a = a.Abs();
             Console.WriteLine(a.ToString());
         }
     }
