@@ -6,5 +6,19 @@
         {
             return "Это пароход";
         }
+        
+        public override string ToString()
+        {
+            return GetInfo() + Title + " " + MaxSpeed;
+        }
+
+        public override bool DoClone()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Steamboat(string title, int maxSpeed) : base(title, maxSpeed)
+        {
+        }
     }
 }

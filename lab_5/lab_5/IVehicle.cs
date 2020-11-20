@@ -4,6 +4,6 @@
     {
         public abstract string GetInfo();
         
-        bool DoClone();
+        public bool DoClone();
     }
 }
