@@ -28,7 +28,9 @@ namespace lab_5
                 if (value < 18)
                 {
                     throw new CaptainAgeException();
-                } 
+                }
+
+                _captainAge = value;
             }
         }
 

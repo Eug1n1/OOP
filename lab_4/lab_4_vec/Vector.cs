@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace lab_4_vec
 {
-    public class MyVector<T>
+    public class MyVector<T> : IVector<T>
     {
         public class ProjectOwner
         {
@@ -25,7 +28,6 @@ namespace lab_4_vec
 
         public ProjectOwner Owner = new ProjectOwner(1, "Evgeniy Shumskiy", "BSTU Student");
         
-
 
         public MyVector()
         {
@@ -90,6 +92,33 @@ namespace lab_4_vec
                 str += item.ToString() + " ";
             }
             return str;
+        }
+
+        public void SaveToJson(string path)
+        {
+            Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
+            serializer.Converters.Add(new Newtonsoft.Json.Converters.JavaScriptDateTimeConverter());
+            serializer.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            serializer.TypeNameHandling = Newtonsoft.Json.TypeNameHandling.Auto;
+            serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
+
+            using (StreamWriter sw = new StreamWriter(path))
+            using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, Items, typeof(List<T>));
+            }
+        }
+
+        public void LoadFromJson(string path)
+        {
+            List<T> deserializedShips = Newtonsoft.Json.JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(path),
+                new Newtonsoft.Json.JsonSerializerSettings
+                {
+                    TypeNameHandling = Newtonsoft.Json.TypeNameHandling.Auto,
+                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
+                });
+            
+            Items.AddRange(deserializedShips);
         }
     }
 }
