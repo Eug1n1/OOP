@@ -1,15 +1,15 @@
 ﻿namespace lab_5
 {
-    public class Corvette : Ship
+    public class Boat : Ship
     {
         public override string GetInfo()
         {
-            return "Это корвет";
+            return "Это лодка";
         }
         
         public override string ToString()
         {
-            return GetInfo() + " " + Title + " " + MaxSpeed;
+            return GetInfo() + " " + CommonInfo.Title + " " + CommonInfo.CaptainName;
         }
 
         public override bool DoClone()
@@ -17,7 +17,7 @@
             throw new System.NotImplementedException();
         }
 
-        public Corvette(string title, int maxSpeed) : base(title, maxSpeed)
+        public Boat(CommonInfo info) : base(info)
         {
         }
     }

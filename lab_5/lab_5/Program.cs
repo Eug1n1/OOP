@@ -7,12 +7,12 @@ namespace lab_5
     {
         static void Main(string[] args)
         {
-            var a = new MyOwnShip("stella", 12);
+            /*var a = new MyOwnShip("stella", 12);
             Console.WriteLine(a.GetInfo());
             a.DoClone();
             
             Ship b = new Steamboat("Steam", 30);
-            /*Ship ab = b;*/
+            /*Ship ab = b;#1#
             Console.WriteLine(b.GetInfo());
             
             var c = new Boat("boat", 5);
@@ -35,7 +35,9 @@ namespace lab_5
             }
 
             
-            Console.WriteLine(((Ship)c).GetInfo());
+            Console.WriteLine(((Ship)c).GetInfo());*/
+            
+            
         }
     }
 }

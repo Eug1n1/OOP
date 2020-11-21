@@ -2,14 +2,11 @@
 {
     public abstract class Ship : IVehicle
     {
-        public string Title { get; set; }
-        public int MaxSpeed { get; set; }
+        public CommonInfo CommonInfo { get; set; }
         
-        
-        protected Ship(string title, int maxSpeed)
+        public Ship(CommonInfo info)
         {
-            Title = title;
-            MaxSpeed = maxSpeed;
+            CommonInfo = info;
         }
 
         public override string ToString()
