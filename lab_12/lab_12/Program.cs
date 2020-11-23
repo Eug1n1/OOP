@@ -36,7 +36,7 @@ namespace lab_12
 
             Console.WriteLine(Reflector.Invoke(typeof(MagicClass), "ItsMagic", "/home/eug1n1/Downloads/params.json"));*/
 
-            var a = Reflector.Create(typeof(List<int>), Type.EmptyTypes) as List<int>;
+            /*var a = Reflector.Create(typeof(List<int>), Type.EmptyTypes) as List<int>;
             a.Add(5);
             a.Add(4);
             a.Add(1);
@@ -44,7 +44,10 @@ namespace lab_12
             foreach (var e in a)
             {
                 Console.WriteLine(e);
-            }
+            }*/
+
+
+            Reflector.Analize(typeof(string));
         }
         
     }

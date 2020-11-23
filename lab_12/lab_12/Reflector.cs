@@ -16,6 +16,7 @@ namespace lab_12
             }
 
             var fullInfo = "";
+            fullInfo += Writer(type.Name, "", '#');
             fullInfo += Writer("Assembly Information", GetAssembly(type));
             fullInfo += Writer("Interfaces", GetInterfaces(type));
             fullInfo += Writer("Fields", GetFields(type));
@@ -135,13 +136,13 @@ namespace lab_12
             return interfacesInfo;
         }
 
-        private static string Writer(string title, string text)
+        private static string Writer(string title, string text, char borderChar = '-')
         {
             var fullText = "";
             
             var border = "";
             for (int i = 0; i < title.Length + 30; i++)
-                border += "-";
+                border += borderChar;
 
             fullText += $"{border}\n{title}\n{border}\n\n";
             fullText += $"{text}\n";
