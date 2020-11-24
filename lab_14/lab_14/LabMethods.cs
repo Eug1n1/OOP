@@ -13,7 +13,7 @@ namespace lab_14
         public static void BinarySerializer(string path, LogEntry log)
         {
             var formatter = new BinaryFormatter();
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(path, FileMode.Create))
             {
                 formatter.Serialize(fs, log);
             }
@@ -23,7 +23,7 @@ namespace lab_14
         {
             var formatter = new BinaryFormatter();
 
-            var fs = new FileStream(path, FileMode.OpenOrCreate);
+            var fs = new FileStream(path, FileMode.Open);
             var log = (LogEntry) formatter.Deserialize(fs);
             fs.Dispose();
 
@@ -52,7 +52,7 @@ namespace lab_14
         public static void XmlSerializer(string path, LogEntry log)
         {
             var formatter = new XmlSerializer(typeof(LogEntry));
-            using (var fs = new FileStream(path, FileMode.OpenOrCreate))
+            using (var fs = new FileStream(path, FileMode.Create))
             {
                 formatter.Serialize(fs, log);
             }
@@ -62,7 +62,7 @@ namespace lab_14
         {
             var formatter = new XmlSerializer(typeof(LogEntry));
 
-            var fs = new FileStream(path, FileMode.OpenOrCreate);
+            var fs = new FileStream(path, FileMode.Open);
             var log = (LogEntry) formatter.Deserialize(fs);
             fs.Dispose();
 
@@ -72,7 +72,7 @@ namespace lab_14
         public static void EnumerableBinarySerialize(string path, IEnumerable<LogEntry> logs)
         {
             var formatter = new BinaryFormatter();
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(path, FileMode.Create))
             {
                 formatter.Serialize(fs, logs);
             }
@@ -101,7 +101,7 @@ namespace lab_14
         {
             var formatter = new BinaryFormatter();
 
-            var fs = new FileStream(path, FileMode.OpenOrCreate);
+            var fs = new FileStream(path, FileMode.Open);
             var logs = (List<LogEntry>) formatter.Deserialize(fs);
             fs.Dispose();
 
@@ -122,7 +122,7 @@ namespace lab_14
         {
             var formatter = new XmlSerializer(typeof(List<LogEntry>));
 
-            var fs = new FileStream(path, FileMode.OpenOrCreate);
+            var fs = new FileStream(path, FileMode.Open);
             var logs = (List<LogEntry>) formatter.Deserialize(fs);
             fs.Dispose();
 

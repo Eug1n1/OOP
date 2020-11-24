@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Linq;
-using System.Xml.Serialization;
 using lab_13;
-using Newtonsoft.Json;
 
 namespace lab_14
 {
     class Program
     {
+        // ReSharper disable once UnusedParameter.Local
         static void Main(string[] args)
         {
-            /*var log = new LogEntry("gjbsdkjb", "name");
+            var log = new LogEntry("gjbsdkjb", "name");
             var path = "/home/eug1n1/log.dat";
             LabMethods.BinarySerializer(path, log);
             
@@ -24,9 +21,13 @@ namespace lab_14
             path = "/home/eug1n1/log.xml";
             LabMethods.XmlSerializer(path, log);
 
-            var log1 = LabMethods.BinaryDeserializer("/home/eug1n1/log.dat");
-            var log2 = LabMethods.JsonDeserializer("/home/eug1n1/log.json");
-            var log3 = LabMethods.XmlDeserializer("/home/eug1n1/log.xml");*/
+            var log11 = LabMethods.BinaryDeserializer("/home/eug1n1/log.dat");
+            var log22 = LabMethods.JsonDeserializer("/home/eug1n1/log.json");
+            var log33 = LabMethods.XmlDeserializer("/home/eug1n1/log.xml");
+
+            Console.WriteLine(log11);
+            Console.WriteLine(log22);
+            Console.WriteLine(log33);
 
             var list = new List<LogEntry>();
             list.Add(new LogEntry("sadfsfdsf", "name"));
@@ -36,26 +37,31 @@ namespace lab_14
             list.Add(new LogEntry("poip", "name"));
             list.Add(new LogEntry("werewr", "name"));
 
-            /*LabMethods.EnumerableBinarySerialize("/home/eug1n1/logs.dat", list);
-            LabMethods.EnumerableJsonSerialize("/home/eug1n1/logs.json", list);*/
+            LabMethods.EnumerableBinarySerialize("/home/eug1n1/logs.dat", list);
+            LabMethods.EnumerableJsonSerialize("/home/eug1n1/logs.json", list);
             
             LabMethods.EnumerableXmlSerialize("/home/eug1n1/logs.xml", list.ToArray());
             
 
-            /*
+            
             var logs1 = LabMethods.EnumerableBinaryDeserializer("/home/eug1n1/logs.dat");
             var logs2 = LabMethods.EnumerableJsonDeserializer("/home/eug1n1/logs.json");
-            var logs3 = LabMethods.EnumerableXmlDeserializer("/home/eug1n1/logs.xml");*/
+            var logs3 = LabMethods.EnumerableXmlDeserializer("/home/eug1n1/logs.xml");
 
-            /*var xDoc = new XmlDocument();
-            xDoc.Load("/home/eug1n1/logs.xml");
-            var elem = xDoc.DocumentElement;
-
-            XmlNodeList childnodes = elem.SelectNodes("LogEntry");
-            foreach (XmlNode n in childnodes)
+            foreach (var el in logs1)
             {
-                Console.WriteLine(n.SelectSingleNode("@Date").Value);
-            }*/
+                Console.WriteLine(el.Action);
+            }
+            
+            foreach (var el in logs2)
+            {
+                Console.WriteLine(el.Action);
+            }
+            
+            foreach (var el in logs3)
+            {
+                Console.WriteLine(el.Action);
+            }
 
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load("/home/eug1n1/logs.xml");
