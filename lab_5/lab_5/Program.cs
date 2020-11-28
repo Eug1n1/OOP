@@ -40,8 +40,9 @@ namespace lab_5
 
                 harborController.Add(ci2);
                 Debug.WriteLine("poka vse OK!");
-                /*harborController.SaveToTxt("/home/eug1n1/Downloads/harbor.txt");
-                harborController.LoadFromTxt("/home/eug1n1/Downloads/harbor.txt");*/
+                
+                harborController.SaveToTxt("/home/eug1n1/Downloads/harbor.txt");
+                harborController.LoadFromTxt("/home/eug1n1/Downloads/harbor.txt");
                 /*harborController.SaveToJson("/home/eug1n1/Downloads/harbor.json");
                 harborController.LoadFromJson("/home/eug1n1/Downloads/harbor.json");*/
 
@@ -58,14 +59,12 @@ namespace lab_5
                 ExceptionGenerator(a, b);
 
                 harborController.SaveToTxt("/home/eug1n1/Downloads/");
-                harborController.LoadFromTxt("/home/eug1n1/Downloads/harbor.txt");
+                harborController.LoadFromTxt("/home/eug1n1/Downloads/harbor.txt");*/
 
-                harborController.ChangeHarbor(null);
+                /*harborController.ChangeHarbor(null);
 
                 harborController.Delete(50);*/
-
-
-
+                
                 Debug.Assert(false, "hernya", "ne hernya");
             }
             catch (HarborNullException ex)
